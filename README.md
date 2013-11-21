@@ -18,14 +18,14 @@ export MYAPPNAME_DB_HOST="127.0.0.1"
 
 You could retrieve your application's configuration by specifying the environment variables to retrieve and a number of prefixes to attempt to use.
 
-```
+```javascript
 var scopenv = require('scopenv');
 console.log(scopenv(['host', 'pass'], 'db', 'myappname'))
 ```
 
 Output
 
-```
+```javascript
 { host: '127.0.0.1', pass: 'password123' }
 ```
 
@@ -34,14 +34,14 @@ This is especially helpful in development if you want to simply define a set of 
 
 If you didn't specify 'myappname', you'd get:
 
-```
+```javascript
 var scopenv = require('scopenv');
 console.log(scopenv(['host', 'pass'], 'db'))
 ```
 
 Output
 
-```
+```javascript
 { host: '123.45.67.89', pass: 'password123' }
 ```
 
