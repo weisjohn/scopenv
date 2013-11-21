@@ -1,7 +1,7 @@
 {
   "name": "scopenv",
   "version": "0.0.1",
-  "description": "environment variables with a variable number of prefixes",
+  "description": "environment variables with any number of prefixes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
