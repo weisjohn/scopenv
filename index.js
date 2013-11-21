@@ -23,7 +23,7 @@ module.exports = function(variables) {
     // recursive scoping
     function find(variable, depth) {
 
-        if (depth > len) return "";
+        if (depth > len) return;
 
         // the sauce - right-most prefixes are joined to the variable
         var name = args.slice(0, len - depth).reverse().concat(variable).join("_")
@@ -31,7 +31,8 @@ module.exports = function(variables) {
     }
 
     variables.map(upper).forEach(function(variable) {
-        scopenv[variable.toLowerCase()] = find(variable, 0);
+        var scoped = find(variable, 0);
+        if (scoped) scopenv[variable.toLowerCase()] = scoped;
     });
 
     return scopenv;
