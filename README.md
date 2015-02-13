@@ -1,7 +1,7 @@
 scopenv
 ==========
 
-### environment variables with any number of prefixes
+### environment variables with optional, variadic prefixes
 
 scopenv allows you to pull in configuration values from your environment variables while specifying optional prefixes that should be honored. This is helpful when colocating a number of instances of generic apps that use similar variable names but need different values.
 
